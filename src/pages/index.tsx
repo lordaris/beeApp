@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import HeartBackground from "../components/HeartBackground";
+import MobileGrid from "../components/MobileGrid";
+
 export default function Home() {
   const [keyPressed, setKeyPressed] = useState("");
 
@@ -32,7 +34,12 @@ export default function Home() {
 
   return (
     <>
-      <HeartBackground />
+      <div className="hidden md:block">
+        <HeartBackground />
+      </div>
+      <div className="md:hidden">
+        <MobileGrid playSound={playSound} />
+      </div>
     </>
   );
 }
