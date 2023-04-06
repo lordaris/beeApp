@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useLayoutEffect } from "react";
 import styles from "../styles/Home.module.css";
 
 const HEART_EMOJIS = ["🍯", "🐝", "🍪"];
@@ -18,7 +18,7 @@ const HeartBackground = () => {
     setHearts((hearts) => [...hearts, newHeart]);
   };
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const timer = setInterval(() => {
       setHearts((hearts) => {
         return hearts

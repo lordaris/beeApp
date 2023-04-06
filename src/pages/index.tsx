@@ -34,9 +34,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="hidden md:block">
-        <HeartBackground />
-      </div>
+      <HeartBackground />
       <div className="md:hidden">
         <MobileGrid playSound={playSound} />
       </div>
